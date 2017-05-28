@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Chaordic OnSite Pure JS - Arthur Bleil</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="onsite-container">
+        <h1>Chaordic OnSite - Pure JS</h1>
+        <div class="chaordic-onsite"></div>
+        <div class="github">
+            <a href="https://github.com/Bleil/chaordic-on-site-pure-js" target="_blank">
+                <img src="https://s-media-cache-ak0.pinimg.com/originals/3c/d5/67/3cd5679f54dc60811383649f9f6ea37d.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function () {
+            var scripts = ['js/carousel/carousel.js', 'js/onsite.js'];
+            var body = document.body;
+            for (var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.src = scripts[i];
+                script.type = 'text/javascript';
+                body.appendChild(script);
+            }
+        }());
+    </script>
+</body>
+
+</html>

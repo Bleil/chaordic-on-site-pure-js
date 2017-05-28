@@ -1,0 +1,76 @@
+.carousel {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.carousel .carousel-nav-arrow {
+    width: 22px;
+    height: 100%;
+    position: relative;
+}
+
+.carousel .carousel-nav-arrow button  {
+    width: 17px;
+    height: 34px;
+    border: none;
+    top: 55px;
+    text-decoration: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.carousel .carousel-nav-arrow.left button {
+    right: 5px;
+    background-image: url(../img/carousel-nav-arrow-left.png);
+}
+
+.carousel .carousel-nav-arrow.right button {
+    left: 5px;
+    background-image: url(../img/carousel-nav-arrow-right.png);
+}
+
+.carousel .carousel-nav-arrow.left button:hover, 
+.carousel .carousel-nav-arrow.right button:hover {
+    background-position: 0 -34px;
+}
+
+.carousel .carousel-items {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel .carousel-items::after {
+   content: '';
+   width: 30px;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+   background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+}
+
+.carousel .carousel-items .carousel-items-scroller {
+    height: 100%;
+    overflow: auto;
+    font-size: 0;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+}
+
+.carousel .carousel-items .carousel-items-scroller .onsite-item {
+    margin-left: 5px;    
+}
